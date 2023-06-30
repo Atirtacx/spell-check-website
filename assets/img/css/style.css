@@ -2,6 +2,7 @@
 :root {
   --header-height: 3.5rem;
   --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 70%);
   --text-color-light: hsl(0, 0%, 60%);
   --body-color: hsl(0, 0%, 0%);
   --container-color: hsl(0, 0%, 8%);
@@ -49,7 +50,7 @@ html {
 body,
 button,
 input {
-  font-family: var(--body-color);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--text-color);
 }
@@ -166,6 +167,12 @@ img {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
 }
 
 .show-menu {
