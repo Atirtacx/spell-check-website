@@ -164,9 +164,25 @@ img {
 }
 
 .nav__link {
+  position: relative;
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
+}
+
+.nav__link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+
+.nav__link:hover::after {
+  width: 70%;
 }
 
 .nav__close {
@@ -189,6 +205,10 @@ img {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.active-link::after {
+  width: 70%;
 }
 
 .home {
@@ -454,4 +474,14 @@ img {
 
 .show-scroll {
   bottom: 3rem;
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .footer__data {
+    grid-template-columns: max-content;
+  }
 }
