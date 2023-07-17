@@ -150,8 +150,6 @@ img {
     background-color: hsla(0, 0%, 0%, 0.3);
     width: 100%;
     padding-block: 4rem;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     transition: top 0.4s;
   }
 }
@@ -201,7 +199,6 @@ img {
   width: 1000%;
   height: 100%;
   background-color: hsla(0, 0%, 0%, 0.3);
-  backdrop-filter: blur(24px);
   top: 0;
   left: 0;
   z-index: -1;
@@ -290,14 +287,6 @@ img {
   );
 }
 
-.home__card-title {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  font-size: var(--h3-font-size);
-  z-index: 1;
-}
-
 .home__card:hover .home__card-img {
   transform: scale(1.2);
 }
@@ -312,6 +301,7 @@ img {
   font-family: var(--second-font);
   font-weight: var(--font-semi-bold);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .button i {
@@ -650,5 +640,82 @@ img {
 @media screen and (min-width: 1152px) {
   .container {
     margin-inline: auto;
+  }
+  .section {
+    padding-block: 7rem 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .blur-header::after {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+  .home__container {
+    grid-template-columns: initial;
+    justify-content: initial;
+    row-gap: 4rem;
+    padding-top: 6.5rem;
+  }
+  .home__shadow {
+    height: 980px;
+  }
+  .home__data {
+    text-align: initial;
+  }
+  .home__subtitle {
+    font-size: var(--h2-font-size);
+  }
+  .home__description {
+    margin-bottom: 2.5rem;
+  }
+  .home__cards {
+    grid-template-columns: repeat(4, 260px);
+  }
+  .button {
+    column-gap: 1.5rem;
+  }
+  .about__container {
+    grid-template-columns: 400px 460px;
+    column-gap: 8.5rem;
+    padding-block: 1rem;
+  }
+  .about__description {
+    margin-bottom: 3rem;
+  }
+  .about__img {
+    width: 460px;
+  }
+  .popular__container {
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 3rem;
+    padding-top: 4rem;
+  }
+  .popular__title {
+    font-size: var(--h2-font-size);
+  }
+  .popular__location {
+    font-size: var(--normal-font-size);
+  }
+  .explore__img {
+    height: 600px;
+  }
+  .footer {
+    padding-block: 5rem 3rem;
+  }
+  .footer__title {
+    margin-bottom: 1.5rem;
+  }
+  .footer__group {
+    margin-top: 7rem;
+  }
+  .footer__social {
+    column-gap: 2rem;
+  }
+  .footer__social-link {
+    font-size: 1.5rem;
+  }
+  .scrollup {
+    right: 3rem;
   }
 }
